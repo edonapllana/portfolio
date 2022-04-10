@@ -1,0 +1,121 @@
+#home {
+    
+    background-image: url("../../assets/images/shape2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#mypic {
+    display: none;
+}
+
+.home-container {
+    display: flex;
+    height: 80vh;
+}
+
+.home-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-right {
+    flex: 1;
+}
+
+.home-left-wrapper {
+    padding: 0 50px 0 50px;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.home-left-intro {
+    font-size: 30px;
+    font-weight: 300;
+    color: var(--color-pink);
+}
+
+.home-left-name {
+    font-size: 60px;
+    color: var(--color-white);
+}
+
+.home-left-tittle {
+    height: 50px;
+    overflow: hidden;
+}
+
+.home-tittle-wrapper {
+    height: 100%;
+    animation: move 10s ease-in-out infinite alternate;
+
+}
+
+@keyframes move {
+    33%{
+        transform: translateY(-50px);
+    }
+    66%{
+        transform: translateY(-100px);
+    }
+    99%{
+        transform: translateY(-150px);
+    }
+}
+
+.tittle-wrapper-items {
+    height: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    background: -webkit-linear-gradient(#f63571, #ffb8c1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+}
+
+.home-left-desc {
+    text-align: justify;
+    color: var(--color-pink-primary);
+    padding: 1.2rem 0;
+}
+
+/* RIGHT SIDE **/
+/*.right-bg {
+    clip-path: circle(50% at 50% 50%);
+    background: linear-gradient(to right, #133cb2, #944a96);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}*/
+.right-bg {
+}
+.myPic {
+}
+
+/* Media Query */
+
+/* Small Devices */
+@media screen and (max-width: 600px) {
+    .home-container {
+        flex-direction: column;
+        width: var(--container-width-sm);
+        margin-top: 0;
+        overflow:scroll;
+    }
+
+    .home-left-wrapper {
+        align-items: center;
+        text-align: center;
+    }
+
+    .home-left-tittle {
+        display: none;
+    }
+}

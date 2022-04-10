@@ -1,0 +1,159 @@
+/* == GENERAL STYLES == */
+
+/* Importing 'Roboto Slab' font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600&display=swap'); 
+
+/* The Default Page Stylization */
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    margin-block-start: auto;
+}
+
+/* Adding Background&Font Color and RespContainer width as Default values in root pseudo-class*/
+:root {
+    --color-bg-pink: #ffb8c1;
+    --color-bg: linear-gradient(to right, #f63571, #ffb8c1);
+    --color-bg-variant: #9395D3;
+    --color-primary: #A2A3BB;
+    --color-primary-variant: #9CAFB7;
+    --color-white: #FBF9FF;
+    --color-light: #B3B7EE;
+    --color-black: #000;
+    --color-pink-primary: #f63571;
+    --color-pink: #ffb8c1;
+
+    --tansition: all 400ms ease;
+
+    --container-width-lg: 75%;
+    --container-width-md: 86%;
+    --container-width-sm: 90%;
+}
+
+/* html's tag properties */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Engine properties */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* body tag's properties */
+body {
+    font-family: 'Roboto Slab', serif;
+    background: var(--color-bg);
+    color: var(--color-black);
+    line-height: 1.5;
+    background: #FBF9FF;
+    background-image: url("../src/assets/images/texture1.webp");
+    background-repeat: no-repeat;
+    border: 7px solid #f63571;
+}
+
+.texture {
+    background-image: url(../src/assets/images/bg-texture.png);
+}
+
+/* General Container Class Slyle */
+.container {
+    width: var(--container-width-lg);
+    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Heading tag's properties */ 
+h1, h2, h3, h4, h5 {
+    font-weight: 500;
+} 
+
+h1 {
+    font-size: 2.5rem;
+}
+
+section {
+    margin-top: 8rem;
+}
+
+ section > h2, section > h5 {
+    text-align: center;
+    color: var(--color-pink);
+ }
+
+ section > h2 {
+     color: var(--color-pink-primary);
+     margin-bottom: 3rem;
+ }
+
+ .text-light {
+     color: var(--color-light);
+ }
+
+ /* Anchors/Links Style Properies */
+ a {
+    color: var(--color-pink);
+    transform: var(--transition);
+ }
+
+ /* Button class Style properties */
+ .btn {
+     width: max-content;
+     display: inline-block;
+     color: var(--color-black);
+     padding: 0.75rem 1.2rem;
+     border-radius: 0.4rem;
+     cursor: pointer;
+     border: 1px solid var(--color-pink-primary);
+     transform: var(--transition);
+ }
+
+ .btn:hover {
+     background: var(--color-pink);
+     color: var(--color-white);
+     border-color: transparent;
+ }
+
+ .btn-primary {
+     background: var(--color-white);
+     color: var(--color-bg);
+ }
+
+ /* Image Style Properties */
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* == Media Queries == */
+
+/* Medium Devices */
+@media screen and (max-width: 1024px) {
+    /* Container and Section Def Style Properties for md */
+    .container {
+        width: var(--container-width-md);
+    }
+
+    .section {
+        margin-top: 6rem;
+    }
+}
+
+/* Small Devices */
+@media screen and (max-width: 600px) {
+    /* Container and Section Def Style Properties for md */
+    .container {
+        width: var(--container-width-sm);
+    }
+
+    .section > h2 {
+        margin-top: 2rem;
+    }
+}

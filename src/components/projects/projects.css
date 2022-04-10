@@ -1,0 +1,65 @@
+/* Main Div For the Project Section*/
+.project_container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+
+/* Article Items */
+.project_items {
+    background: var(--color-bg);
+    padding: 1, 3rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.project_items:hover {
+    border: 0.4rem solid var(--color-pink-primary);
+    border-color: var(--color-pink-primary);
+    background-color: none;
+}
+
+/* Images for the Projects */
+.project_images {
+    border-radius: 1.5rem;
+    border: 0.2rem solid var(--color-pink-primary);
+    overflow: hidden;
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    opacity: 0.75;
+}
+
+.project_items h3 {
+    margin: 1.2rem 0 2rem;
+    color: var(--color-white);
+}
+
+.btn {
+    background: var(--color-pink);
+}
+/* Media Queries */
+
+/* Medium Screen */
+@media screen and (max-width: 1024px) {
+    .project_container {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2rem;   
+    }
+}
+
+/* Small Screen */
+@media screen and (max-width: 600px) {
+    .project_container{
+        grid-template-columns: 1fr;
+        gap: 1rem; 
+        margin-top: 10px;
+    }
+
+    #projects {
+        margin-top: 20px;
+    }
+}

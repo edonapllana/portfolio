@@ -1,0 +1,247 @@
+/* Styling the main class of the about section */
+.about_container {
+    display: grid;
+    grid-template-columns: 35% 50%;
+    gap: 15%;
+}
+
+/* Styling the About me/Left Side, Which Contains the Image */
+.about_me {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 2rem;
+    background: linear-gradient(45deg transparent, var(--color-primary), transparent);
+    display: grid;
+    place-items: center;
+}
+
+/* Styling the About me Image */
+.about_me-img {
+    border-radius: 2rem;
+    overflow: hidden;
+    transform: rotate(-10deg);
+    transition: all 400ms ease;
+}
+
+.about_me-img:hover {
+    transform: rotate(0);
+}
+
+/* Styling the Parent Div Cards */
+.about_cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem
+}
+
+/* Styling the Individual Cards Each Div */
+.about_card {
+    background: var(--color-pink);
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    transition: all 400ms ease;
+} 
+
+.about_card:hover {
+    background: transparent;
+    border-color: var(--color-pink-primary);
+    cursor: default;
+}
+
+.about_card:hover h5 {
+    color: var(--color-pink);
+}
+/* Styling the Elements Inside the Cards */
+/* Styling the Icons Inside the Cards */
+.about_icon {
+    color: var(--color-pink-primary);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+/* Styling the H5 Inside the Cards */
+.about_card h5 {
+    font-size: 0.95rem;
+}
+
+/* Styling the Small Tag Inside the Cards */
+.about_card small {
+    font-size: 0.75rem;
+    color: var(--color-white);
+}
+
+/* Styling the Paragraph Inside About Content */
+.about_content p {
+    margin: 10px auto 10px auto;
+    background: -webkit-linear-gradient(#f63571, #ffb8c1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 300;
+    text-align: justify;
+    padding: 1.2rem 0;
+}
+
+.about_content a {
+    padding: auto;
+    margin: auto;
+}
+
+/* About the Skills and Experiences*/
+
+.about_skills h3 {
+    text-align: center;
+}
+
+.skills_container {
+    display: flex;
+    align-content: center;
+    padding: 2.4rem 5rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    background: var(--color-bg-variant);
+    width: fit-content;
+}
+
+.skills_container:hover {
+    background-color: transparent;
+    border-color: var(--color-primary-variant);
+    cursor: default;
+    transition: all 400ms ease;
+}
+
+.skills_container div {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.skills_details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: var(--color-bg-variant);
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    transition: all 400ms ease;
+}
+
+/* Services Section */
+
+.services {
+    margin-top: 75px;
+}
+
+.container_services {
+    text-align: center;
+}
+
+.container_services h3 {
+    margin-bottom: 10px;
+    color: var(--color-pink-primary);
+}
+.services_info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    background: var(--color-bg);
+    border-radius: 2rem;
+    width: 100%;
+    align-items: center;
+}
+
+.services_items {
+    border-radius: 2rem;
+    padding: 3rem;
+}
+
+.services_items:hover{
+    border: 2px solid var(--color-bg);
+}
+
+.services_icon {
+    font-size: 2rem;
+}
+
+.services_icon:hover {
+    color: var(--color-white);
+    border: 4px double var(--color-pink-primary);
+    border-radius: 2em;
+}
+
+.services_tittle {
+    font-size: 1.2rem;
+    padding: 1rem 0;
+}
+
+/* Media Query for The Page */
+
+/* Medium Devices */
+@media screen and (max-width: 1024px) {
+    .about_container {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .about_me {
+        width: 50%;
+        margin: 2rem auto 4rem;
+    }
+     
+    .about_content p {
+        margin: 1rem 0 1.5rem;
+    }
+
+    .services {
+        margin-top: 0px;
+    } 
+
+    .services_info {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .services_items {
+        padding: 1rem;
+    }
+}
+
+/* The Button */
+
+.contactme {
+    display: flex;
+    align-items: center;
+}
+/* Small Devices */
+@media screen and (max-width: 600px) {
+    .about_me {
+        width: 65%;
+        margin: 0 auto 4rem;
+    }
+     
+    .about_cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .about_content {
+        text-align: center;
+    }
+
+    .about_content p {
+         margin: 1.5rem 0;
+    }
+
+    .services_info {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .services_items {
+        padding: 1rem;
+    }
+
+    #about {
+        margin-top: 40px;
+    }
+}
